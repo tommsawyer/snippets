@@ -24,9 +24,9 @@ options     head
 snippet imfunc
 abbr    func ...() { ... }(...)
 alias   fi
-  func ${1}(${2}) ${3}{
+  func (${1}) ${2}{
     ${0:TARGET}
-  }(${4})
+  }(${3})
 
 snippet     printf
 alias pf
