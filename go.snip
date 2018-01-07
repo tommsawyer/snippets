@@ -21,6 +21,13 @@ options     head
     ${0:TARGET}
   }
 
+snippet imfunc
+abbr    func ...() { ... }(...)
+alias   fi
+  func ${1}(${2}) ${3}{
+    ${0:TARGET}
+  }(${4})
+
 snippet     printf
 alias pf
 options     head
