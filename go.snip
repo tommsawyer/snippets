@@ -1,5 +1,3 @@
-source go.vim
-
 snippet     helloworld
 abbr        package main\nimport fmt...
 options     head
@@ -118,3 +116,22 @@ options     head
     }
   }
 
+
+snippet stest
+options head
+  package ${1}
+
+  type ${2} struct {
+    suite.Suite
+  }
+
+  func (s *$2) SetupTest() {
+  }
+
+  func (s *$2) TestNothing() {
+    ${0}
+  }
+
+  func Test$2Suite(t *testing.T) {
+    suite.Run(t, new($2))
+  }
